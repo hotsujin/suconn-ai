@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RAG 말고 LLM Wiki — 쓸수록 똑똑해지는 지식 — 수콘AI</title>
+<meta name="description" content="매번 원본을 뒤지는 대신, 한 번 정리해 쌓아 두면 대화를 거듭할수록 지식이 다듬어진다." />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a href="index.html" class="brand"><span class="dot"></span>수콘AI</a>
+  <nav class="nav-links"><a href="index.html#systems">시스템</a><a href="index.html#writing">글</a><a href="index.html#contact" class="nav-cta">연락</a></nav>
+</div></header>
+
+<article class="article">
+  <div class="wrap">
+    <a class="back" href="index.html#writing">← 모든 글</a>
+    <div class="article-head">
+      <div class="meta-row"><span class="badge evergreen"><span class="seed"></span>여문 글</span><span class="tag-axis">세컨드 브레인</span><span class="note-small">5분</span></div>
+      <h1>RAG 말고 LLM Wiki —<br>쓸수록 똑똑해지는 지식</h1>
+      <p class="lede">대부분의 지식 검색은 물어볼 때마다 원본을 처음부터 뒤진다. 나는 한 번 정리해 쌓아 두고, 다음부터는 그 정리본만 읽게 했다.</p>
+      <div class="byline"><span>세컨드 브레인 시리즈</span><span>·</span><span>2026년 6월 갱신</span></div>
+    </div>
+
+    <div class="article-body">
+      <p>자료를 쌓아 두고 AI에게 물어보는 방식에는 크게 두 갈래가 있다. 흔히 쓰는 쪽은 <strong>RAG</strong>다. 질문이 들어올 때마다 쌓아 둔 원본 더미를 뒤져서, 관련 있어 보이는 조각을 찾아 그때그때 답을 조립한다. 도서관에 갈 때마다 서가 전체를 다시 훑는 셈이다.</p>
+      <p>나는 다른 쪽을 택했다. <strong>LLM Wiki</strong>라고 부르는 방식이다. 핵심은 단순하다. 새 자료가 들어오면 <em>그 자리에서 한 번 정리해 위키 페이지로 만들어 둔다.</em> 그리고 다음부터는 원본이 아니라 그 정리본만 읽는다.</p>
+
+      <div class="callout"><b>RAG</b> — 물어볼 때마다 원본을 뒤져 답을 조립한다.<br><b>LLM Wiki</b> — 들어올 때 한 번 정리해 쌓아 두고, 다음부턴 정리본만 읽는다.</div>
+
+      <h2>왜 이게 더 나은가</h2>
+      <p>차이는 시간이 지날수록 벌어진다. RAG는 매번 새로 뒤지기 때문에, 어제 답한 내용을 오늘 또 처음부터 찾아낸다. 어제의 작업이 오늘을 더 빠르게 만들지 않는다. 반면 LLM Wiki는 한 번 정리한 페이지가 그대로 남는다. 대화를 거듭할수록 페이지가 다듬어지고, 새 자료가 들어오면 기존 페이지를 고쳐 쓴다. <strong>쓸수록 지식이 누적되고 정확해진다.</strong></p>
+      <p>이건 카파시(Andrej Karpathy)가 이야기한 'LLM 위키'의 발상을 내 식으로 옮긴 것이기도 하다. 자료가 페이지를 다시 쓰고, 모순되는 정보가 들어오면 스스로 조정되는 — 살아 있는 위키. 정적인 폴더가 아니라, 정보가 들어올 때마다 자기를 갱신하는 저장소다.</p>
+
+      <h2>통째로 읽지 않는다 — 색인 먼저</h2>
+      <p>여기엔 비용 문제가 따라붙는다. 노트가 수백, 수천 개가 되면 질문할 때마다 전부 읽어 들이는 건 불가능하다. 토큰이 폭발하고, 그만큼 돈이 나간다.</p>
+      <p>그래서 나는 <strong>색인 먼저(index-first)</strong> 원칙을 둔다. 질문이 들어오면 볼트 전체를 펼치는 게 아니라, 한 줄짜리 색인을 먼저 훑어 후보 서너 개로 좁히고, <em>그것만</em> 펼쳐 읽는다. 도서관 전체를 뒤지지 않고 색인 카드부터 보는 것과 같다. 같은 답을 내면서 읽는 양은 10분의 1 이하로 줄어든다.</p>
+      <p>색인 자체도 손으로 채우지 않는다. 색인은 '진입점 + 새 항목 한 줄 추가'까지만 한다. 거대한 목록을 사람이 관리하는 순간 그 시스템은 무너지기 때문이다.</p>
+
+      <div class="pull">한 번 정리한 건 다시 읽을 필요가 없다. 그게 지식이 복리로 쌓이는 유일한 방법이다.</div>
+
+      <h2>형식은 가장 단순하게</h2>
+      <p>저장 형식은 마크다운 일반 텍스트다. 화려한 데이터베이스도, 특정 앱의 전용 포맷도 아니다. 이유는 분명하다. 일반 텍스트는 <strong>어떤 AI 모델이든 읽는다.</strong> 버전 관리가 되고, 클라우드든 로컬이든 자유롭게 옮길 수 있다. 특정 플랫폼에 갇히지 않는다.</p>
+      <p>가장 단순한 형식이 가장 오래간다. 도구는 바뀌어도 텍스트는 남는다.</p>
+    </div>
+
+    <div class="related">
+      <p class="kick">이어지는 글</p>
+      <a href="three-layers.html">지식을 세 층으로 나눈 이유<span>내 생각, 외부 지식, AI가 본 나를 일부러 갈라 두는 까닭</span></a>
+      <a href="ai-os.html">AI는 도구가 아니라 운영체제다<span>기억·규칙·자동화가 하나로 맞물릴 때 무엇이 달라지는가</span></a>
+    </div>
+  </div>
+</article>
+
+<footer><div class="wrap foot-in">
+  <a href="index.html" class="brand"><span class="dot"></span>수콘AI</a>
+  <div class="foot-meta">AI를 시스템으로 쓴다 · 한 사람의 AI 운영 기록</div>
+</div></footer>
+
+<script>const nav=document.getElementById('nav');const f=()=>nav.classList.toggle('scrolled',scrollY>10);f();addEventListener('scroll',f,{passive:true});</script>
+</body>
+</html>
