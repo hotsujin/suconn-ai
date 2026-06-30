@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>수콘AI — AI를 시스템으로 쓴다 · 한 사람의 AI 운영 기록</title>
-<meta name="description" content="AI를 한 번 쓰고 버리는 도구가 아니라, 매일 일을 대신 굴리는 운영체제로 다뤄 온 방법·시스템·관점의 기록." />
-<meta property="og:title" content="수콘AI — AI를 시스템으로 쓴다" />
-<meta property="og:description" content="질문하는 사람에서, AI가 일하도록 설계하는 사람으로. 그 방법과 발전 과정." />
+<title>수콘AI — AI를 운영체제로 굴린다 · 한 사람의 시스템 기록</title>
+<meta name="description" content="AI를 한 번 쓰고 버리는 도구가 아니라, 매일 일을 대신 굴리는 운영체제로 다뤄 온 방법·시스템·관점의 분해도." />
+<meta property="og:title" content="수콘AI — AI를 운영체제로 굴린다" />
+<meta property="og:description" content="질문하는 사람에서, AI가 일하도록 설계하는 사람으로. 그 시스템의 분해도." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
     <a href="#top" class="brand"><span class="dot"></span>수콘AI</a>
     <nav class="nav-links">
       <a href="#system">운영 구조</a>
-      <a href="#axes">네 개의 축</a>
+      <a href="#map">활용 맵</a>
       <a href="#writing">글</a>
       <a href="#contact" class="nav-cta">연락</a>
     </nav>
@@ -33,18 +33,18 @@
 <section class="hero">
   <div class="hero-glyph">∞</div>
   <div class="wrap">
-    <div class="eyebrow reveal">AI를 다루는 한 사람의 운영 기록</div>
+    <div class="eyebrow reveal">AI를 다루는 한 사람의 시스템 기록</div>
     <h1 class="reveal">질문하는 사람에서,<br>AI가 <span class="serif">일하도록 설계하는</span> 사람으로.</h1>
-    <p class="lede reveal">매번 더 잘 묻는 대신, 한 번 규칙으로 만들어 시스템이 알아서 일하게 만듭니다.</p>
+    <p class="lede reveal">매번 더 잘 묻는 대신, 한 번 규칙으로 만들어 시스템이 알아서 일하게 만듭니다. 이건 브로셔가 아니라 그 시스템의 분해도입니다.</p>
     <div class="hero-actions reveal">
-      <a href="#writing" class="btn btn-primary">글 읽어보기</a>
-      <a href="#system" class="btn btn-ghost">운영 구조 보기</a>
+      <a href="#map" class="btn btn-primary">활용 맵 보기</a>
+      <a href="#writing" class="btn btn-ghost">개념 글 읽기</a>
     </div>
     <div class="hero-mini reveal">
       <span class="pill">콘텐츠 생산</span>
       <span class="pill">세컨드 브레인</span>
+      <span class="pill">자동화·에이전트</span>
       <span class="pill">프롬프트 설계</span>
-      <span class="pill">자동화 운영</span>
     </div>
   </div>
 </section>
@@ -79,50 +79,74 @@
   </div>
 </section>
 
-<!-- 02 · AXES -->
-<section id="axes">
+<!-- 02 · AI USE MAP -->
+<section id="map">
   <div class="wrap">
     <div class="reveal">
-      <div class="deck-kick"><span class="no">02</span><span class="ln"></span><span class="lb">네 개의 축</span></div>
-      <h2 class="deck-title">AI를 다루는 네 갈래</h2>
-      <p class="deck-lead">잘 묻고, 기억하고, 길들이고, 그 바탕이 되는 관점. 각 타일을 누르면 자세한 글로 이어집니다.</p>
+      <div class="deck-kick"><span class="no">02</span><span class="ln"></span><span class="lb">활용 맵</span></div>
+      <h2 class="deck-title">내가 AI를 쓰는 영역, 한 장으로</h2>
+      <p class="deck-lead">네 영역에서 어떤 일을, 어떤 방식으로 굴리는지. 화살표가 달린 항목은 분해해 쓴 글로 이어집니다.</p>
     </div>
-    <div class="tiles">
-      <a class="tile reveal" href="meta-prompting.html">
-        <span class="tno">01</span>
-        <div class="tt">잘 쓰는 법</div>
-        <div class="td">거친 요청을 좋은 요청으로. 작업에 따라 전략을 바꾸고, 사실은 추측하지 않게.</div>
-        <span class="tgo">기본기 읽기 →</span>
-      </a>
-      <a class="tile reveal" href="llm-wiki.html">
-        <span class="tno">02</span>
-        <div class="tt">기억하는 법</div>
-        <div class="td">쓸수록 똑똑해지는 지식 저장소. 내 생각·외부 지식·AI가 본 나를 세 층으로.</div>
-        <span class="tgo">세컨드 브레인 읽기 →</span>
-      </a>
-      <a class="tile reveal" href="orchestration.html">
-        <span class="tno">03</span>
-        <div class="tt">길들이는 법</div>
-        <div class="td">한 명이 여러 AI를 부리고, 자동화에 사람이 끼어들 지점을 설계한다.</div>
-        <span class="tgo">커스터마이즈 읽기 →</span>
-      </a>
-      <a class="tile reveal" href="ai-os.html">
-        <span class="tno">04</span>
-        <div class="tt">바탕이 되는 관점</div>
-        <div class="td">왜 도구가 아니라 시스템인가. 무엇을 버려야 더 잘 쓰는가.</div>
-        <span class="tgo">철학 읽기 →</span>
-      </a>
+    <div class="mapgrid">
+      <div class="mapcard reveal">
+        <div class="mh"><div class="mt">콘텐츠 생산</div><span class="mtag">상시</span></div>
+        <div class="mapcaps">
+          <span>러프 의도 → 완성 산출물 한 번에</span>
+          <span>제작 과정을 워크플로우로 고정</span>
+          <a href="harness.html">품질 기준을 판에 박아 둔다</a>
+        </div>
+      </div>
+      <div class="mapcard reveal">
+        <div class="mh"><div class="mt">지식 시스템</div><span class="mtag">상시</span></div>
+        <div class="mapcaps">
+          <a href="three-layers.html">자기·지식·관찰 3층 분리</a>
+          <a href="llm-wiki.html">LLM Wiki — 쓸수록 똑똑해짐</a>
+          <span>색인 우선 검색으로 토큰 최소화</span>
+        </div>
+      </div>
+      <div class="mapcard reveal">
+        <div class="mh"><div class="mt">자동화·에이전트</div><span class="mtag">상시</span></div>
+        <div class="mapcaps">
+          <a href="orchestration.html">오케스트레이터-워커로 부리기</a>
+          <a href="orchestration.html">알림 3종: 보고·질문·승인</a>
+          <span>예약 실행 — 자는 동안 굴러감</span>
+        </div>
+      </div>
+      <div class="mapcard reveal">
+        <div class="mh"><div class="mt">커스터마이즈·설계</div><span class="mtag">상시</span></div>
+        <div class="mapcaps">
+          <a href="ai-os.html">전역 규칙 — 한 번 정하면 자동</a>
+          <a href="meta-prompting.html">메타 프롬프팅 — 요청 자동 정비</a>
+          <span>모델별 역할 분담(지시·실행·토론)</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 03 · WRITING -->
+<!-- 03 · JOURNEY -->
+<section id="journey">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="deck-kick"><span class="no">03</span><span class="ln"></span><span class="lb">발전 과정</span></div>
+      <h2 class="deck-title">물어보던 사람에서, 시스템을 짓는 사람으로</h2>
+    </div>
+    <div class="stepper reveal">
+      <div class="step"><span class="dot"></span><div class="sn">대화</div><h4>물어보기</h4><p>그때그때 질문. 결과는 매번 운에 좌우.</p></div>
+      <div class="step"><span class="dot"></span><div class="sn">규칙</div><h4>규칙으로</h4><p>역할·말투·형식을 한 번 박아 둔다.</p></div>
+      <div class="step"><span class="dot"></span><div class="sn">자동화</div><h4>손에서 떼다</h4><p>반복 일을 워크플로우로 옮긴다.</p></div>
+      <div class="step"><span class="dot"></span><div class="sn">시스템</div><h4>스스로 발전</h4><p>새 정보가 들어올수록 더 똑똑해진다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · WRITING -->
 <section id="writing">
   <div class="wrap">
     <div class="reveal">
-      <div class="deck-kick"><span class="no">03</span><span class="ln"></span><span class="lb">글</span></div>
-      <h2 class="deck-title">개념 하나씩, 풀어 쓴 기록</h2>
-      <p class="deck-lead">완성된 정답이 아니라 다듬어 온 생각. <span class="badge"><span class="seed"></span>씨앗</span> · <span class="badge growing"><span class="seed"></span>자라는 중</span> · <span class="badge evergreen"><span class="seed"></span>여문 글</span> 로 얼마나 여물었는지 표시했습니다.</p>
+      <div class="deck-kick"><span class="no">04</span><span class="ln"></span><span class="lb">개념 글</span></div>
+      <h2 class="deck-title">개념 하나씩, 분해해 쓴 글</h2>
+      <p class="deck-lead">완성된 정답이 아니라 다듬어 온 생각. <span class="badge growing"><span class="seed"></span>자라는 중</span> · <span class="badge evergreen"><span class="seed"></span>여문 글</span> 로 얼마나 여물었는지 표시했습니다.</p>
     </div>
     <div class="wcards">
       <a class="wcard reveal" href="ai-os.html">
@@ -168,39 +192,17 @@
         <div class="wr">읽기 4분 →</div>
       </a>
     </div>
-  </div>
-</section>
 
-<!-- 04 · JOURNEY -->
-<section id="journey">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="deck-kick"><span class="no">04</span><span class="ln"></span><span class="lb">발전 과정</span></div>
-      <h2 class="deck-title">물어보던 사람에서, 시스템을 짓는 사람으로</h2>
-    </div>
-    <div class="stepper reveal">
-      <div class="step"><span class="dot"></span><div class="sn">대화</div><h4>물어보기</h4><p>그때그때 질문. 결과는 매번 운에 좌우.</p></div>
-      <div class="step"><span class="dot"></span><div class="sn">규칙</div><h4>규칙으로</h4><p>역할·말투·형식을 한 번 박아 둔다.</p></div>
-      <div class="step"><span class="dot"></span><div class="sn">자동화</div><h4>손에서 떼다</h4><p>반복 일을 워크플로우로 옮긴다.</p></div>
-      <div class="step"><span class="dot"></span><div class="sn">시스템</div><h4>스스로 발전</h4><p>새 정보가 들어올수록 더 똑똑해진다.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 · PRINCIPLES -->
-<section class="principles" id="principles">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="deck-kick"><span class="no">05</span><span class="ln"></span><span class="lb">운영 원칙</span></div>
-      <h2 class="deck-title">도구가 바뀌어도 변하지 않는 여섯 가지</h2>
-    </div>
-    <div class="chips6 reveal">
-      <div class="pchip"><span class="pn">i</span><span class="pt">맡기되, 끝까지</span></div>
-      <div class="pchip"><span class="pn">ii</span><span class="pt">모르면 모른다고</span></div>
-      <div class="pchip"><span class="pn">iii</span><span class="pt">다 쌓지 않는다</span></div>
-      <div class="pchip"><span class="pn">iv</span><span class="pt">최소 비용, 최선의 결과</span></div>
-      <div class="pchip"><span class="pn">v</span><span class="pt">마지막 판단은 사람</span></div>
-      <div class="pchip"><span class="pn">vi</span><span class="pt">플랫폼에 갇히지 않는다</span></div>
+    <div class="prinstrip reveal" style="margin-top:48px">
+      <div class="pl">운영 원칙 — 도구가 바뀌어도 안 변하는 것</div>
+      <div class="pr-line">
+        <span><b>맡기되 끝까지</b></span><span class="sep">·</span>
+        <span><b>모르면 모른다고</b></span><span class="sep">·</span>
+        <span><b>다 쌓지 않는다</b></span><span class="sep">·</span>
+        <span><b>최소 비용, 최선의 결과</b></span><span class="sep">·</span>
+        <span><b>마지막 판단은 사람</b></span><span class="sep">·</span>
+        <span><b>플랫폼에 갇히지 않는다</b></span>
+      </div>
     </div>
   </div>
 </section>

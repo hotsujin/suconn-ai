@@ -262,3 +262,29 @@ footer{padding:48px 0 56px;border-top:1px solid var(--line);margin-top:80px}
 .pchip:hover{border-color:#d3ccb9;transform:translateY(-3px)}
 .pchip .pn{font-family:"Newsreader",serif;font-style:italic;font-size:17px;color:var(--accent);flex:0 0 auto}
 .pchip .pt{font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.35}
+
+/* ── AI USE MAP (02) ───────────────────── */
+.mapgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+@media(max-width:920px){.mapgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.mapgrid{grid-template-columns:1fr}}
+.mapcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+.mapcard:hover{transform:translateY(-4px);box-shadow:0 22px 48px -32px rgba(27,26,22,.5);border-color:#d3ccb9}
+.mapcard .mh{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:4px}
+.mapcard .mt{font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.mapcard .mtag{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--accent-ink);background:var(--accent-soft);padding:3px 8px;border-radius:999px;white-space:nowrap;margin-top:2px}
+.mapcard .mtag.wip{color:#7a5326;background:#f3e9da}
+.mapcaps{margin-top:16px;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line-soft);padding-top:8px}
+.mapcaps a,.mapcaps span{font-size:13.5px;color:var(--ink-soft);line-height:1.45;padding:7px 0;border-bottom:1px solid var(--line-soft);display:flex;align-items:baseline;gap:7px}
+.mapcaps a:last-child,.mapcaps span:last-child{border-bottom:0}
+.mapcaps a{font-weight:500;transition:color .2s,padding-left .2s}
+.mapcaps a::after{content:"→";color:var(--accent);font-size:12px;margin-left:auto;opacity:.6;transition:opacity .2s,transform .2s}
+.mapcaps a:hover{color:var(--accent)}
+.mapcaps a:hover::after{opacity:1;transform:translateX(3px)}
+.mapcaps span::before,.mapcaps a::before{content:"";flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.45;transform:translateY(-2px)}
+
+/* ── PRINCIPLE STRIP (folded-in) ───────── */
+.prinstrip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.prinstrip .pl{font-family:"Newsreader",serif;font-style:italic;font-size:14px;color:var(--accent);margin-bottom:10px}
+.prinstrip .pr-line{display:flex;flex-wrap:wrap;gap:8px 0;font-size:14.5px;color:var(--ink-soft)}
+.prinstrip .pr-line b{font-weight:700;color:var(--ink)}
+.prinstrip .pr-line .sep{color:var(--line);margin:0 14px}
